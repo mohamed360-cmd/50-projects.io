@@ -19,5 +19,5 @@ This project was built with the following technologies:
 ## Contributing
 
 Contributions are welcome. Feel free to make a pull request or open an issue if you have any suggestions or find any bugs.
-##View it? index.html
+## View it? index.html
 
