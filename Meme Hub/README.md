@@ -1,0 +1,2 @@
+##MEME GENERATOR
+This is a simple web application that uses the Meme API to display memes. The application is built with JavaScript and it displays the title of the meme, the image, the author, and the subreddit. When a user clicks on the "Get Memes" button, the application fetches the data from the Meme API and displays it on the webpage. The application is responsive and can be used on desktop and mobile devices.
