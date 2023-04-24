@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
+body{
+    background-color: #000000;
+    color: antiquewhite;
+    font-family: 'Bruno Ace', cursive;
+    font-family: 'Playfair Display', serif;
+}
+.LoaderConatiner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
+
+.NavBar {
+    background-color: #672107;
+    color: #FFFFFF;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 15px;
+text-align: center; 
+ }
+ #btnGetMemes {
+  background-color: #FF6A00;
+  border-radius: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+#btnGetMemes:hover {
+  transform: scale(1.1);
+}
+
+  #MainContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 5px;
+}
+
+.memeContainer {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    animation: shadow-animation 4s ease-in-out infinite;
+  }
+
+.memeContainer img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.MemeTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fffbfb;
+  }
+  
+  .MemePhoto {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .AuthorName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .SubReddit {
+    font-size: 14px;
+    color: #999;
+  }
+  .memeContainer:hover{
+    cursor: pointer;
+  }
+  @keyframes shadow-animation {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    25% {
+      box-shadow: 0 0 10px rgba(255, 105, 97, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+    }
+    75% {
+      box-shadow: 0 0 10px rgba(255, 228, 225, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 105, 97, 0.3);
+    }
+  }
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    .NavBar {
+      font-size: 1.5rem;
+      padding: 5px;
+    }
+    #btnGetMemes {
+      bottom: 10px;
+      right: 10px;
+      font-size: 16px;
+      padding: 10px 15px;
+    }
+    #MainContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 0;
+    }
+    .memeContainer {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .MemeTitle {
+      font-size: 20px;
+    }
+    .MemePhoto {
+      max-width: 100%;
+    }
+    .AuthorName {
+      font-size: 16px;
+    }
+    .SubReddit {
+      font-size: 12px;
+    }
+  }
